@@ -122,7 +122,8 @@ onc.MapDownload.registerControl = function() {
             onc.MapDownload.selectedName = f.get('name');
             onc.MapDownload.selectedLink = f.get('link');
             document.getElementById('mapnamefield').innerHTML = f.get('name');
-            document.getElementById('mapdownloadbutton').disabled = false;
+            var downloadbutton = document.getElementById('mapdownloadbutton');
+            downloadbutton.disabled = false;
             downloadbutton.setAttribute("disabled", ""); 
         }
     });
