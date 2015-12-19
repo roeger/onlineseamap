@@ -1,0 +1,371 @@
+body{
+    height:100%;
+    font-family: 'Lucida Grande',Verdana,Geneva,Lucida,Arial,Helvetica,sans-serif;
+    font-size: 14px;
+}
+
+#map {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 100%;
+  }
+
+.ol-zoom .ol-zoom-out {
+  margin-top: 202px;
+}
+
+.ol-zoomslider {
+  background-color: transparent;
+  top: 4.8em;
+  height: 195px;
+}
+
+.ol-zoom {
+    top: 3em;
+}
+
+.ol-full-screen {
+    top: 0.5em;
+    left: 0.5em;
+    right: auto;
+}
+
+.ol-mouse-position {
+    top: auto;
+    right: auto;
+    left: 0em;
+    bottom: 0em;
+    background: rgba(255,255,255,0.8);
+    font-size: 10px;
+    padding: 4px;
+}
+
+.scale-metric, .scale-nautical {
+    position:absolute;
+    background: none;
+    padding: 4px;
+    border-radius: 4px;
+    left:0px;
+    bottom:18px;
+}
+
+.scale-nautical {
+    bottom:35px;
+}
+
+.scale-metric-inner, .scale-nautical-inner{
+    border:2px solid black;
+    color:black;
+    font-size: 10px;
+    text-align:center;
+    margin:1px;
+    padding:0 2px
+}
+
+.scale-metric-inner { border-bottom: none; }
+
+.scale-nautical-inner { border-top: none; }
+
+  #sidepanel {
+    position: absolute;
+    right: 0px;
+    height: 100%;
+    z-index: 3;
+  }
+
+
+  #sidebar {
+    position: relative;
+    float: right;
+    height: 100%;
+    max-width: 250px;
+    background: rgba(255,255,255,0.9);
+  }
+
+  #menubuttons {
+    position: relative;
+    float: right;
+  }
+
+  .layerselectoricon, .searchicon, .tripplannericon, .permalinkicon, .editicon {
+    position: relative;
+    top: 50px;
+    float: right;
+    padding: 2px;
+    background: url(../icons/open-iconic/compass-w.png) no-repeat 6px 5px rgba(0,60,136,1);
+    height: 24px;
+    width: 24px;
+    color: white;
+    margin: 1px;
+    display: block;
+  }
+
+ .layerselectoricon {
+    background-image: url(../icons/open-iconic/eye-w.png);
+ }
+
+ .searchicon {
+    background-image: url(../icons/open-iconic/magnifying-glass-w.png);
+ }
+
+ .tripplannericon {
+    background-image: url(../icons/open-iconic/compass-w.png);
+ }
+
+ .permalinkicon {
+    background-image: url(../icons/open-iconic/link-intact-w.png);
+ }
+
+ .editicon {
+    background-image: url(../icons/open-iconic/pencil-w.png);
+ }
+
+ .layerselectorentry {
+    display: block;
+    padding-left: 25px;
+    text-indent: -22px;
+  }
+
+  .layerselectorentry input {
+    width: 13px;
+    height: 13px;
+    vertical-align: bottom;
+    text-indent: 0px;
+  }
+  
+  #layerselector {
+    overflow-y: auto;
+    width: 250px;
+    height: 100%;
+  }
+
+  #layerselectorbaselabel {
+    padding-left: 7px;
+    padding-right: 5px;
+  }
+
+ .search {
+    height: 100%;
+    width: 250px;
+ }
+ .tripplanner {
+    height: 100%;
+    width: 250px;
+ }
+ .inputfield {
+    display: block;
+    padding: 5px 5px 5px 25px;
+    border: solid 3px #c9c9c9;
+    transition: border 0.3s;
+    width: 214px;
+    background: url(../icons/magnifying-glass-2x.png) no-repeat 4px 4px;
+ }
+ 
+ .inputfield:focus {
+      border: solid 3px #969696;
+ }
+
+
+ .searchresult{ 
+    display: block; 
+    padding: 5px;
+ }
+ .searchresult:hover{ 
+    background: lightgray;
+ }
+ #searchresults{
+    position: absolute;
+    overflow-y: auto;
+    top: 30px;
+    bottom: 0px;
+ }
+ 
+ #permalink, #edit {
+    height: 100%;
+    width: 240px;
+    padding-left: 5px;
+    padding-right: 5px;
+ }
+
+ #edit p {
+    margin-top: 0px;
+    padding-top: 5px;
+ }
+
+#currentPermalink {
+    width: 230px;
+}
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index:1000;
+  padding: 1px;
+  background-color: #ffffff;
+  -webkit-background-clip: padding-box;
+          background-clip: padding-box;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.popover.top {
+  margin-top: -10px;
+}
+.popover.right {
+  margin-left: 10px;
+}
+.popover.bottom {
+  margin-top: 10px;
+}
+.popover.left {
+  margin-left: -10px;
+}
+.popover-title {
+  margin: 0;
+  padding: 8px 14px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 5px 5px 0 0;
+}
+.popover-content {
+  padding: 9px 14px;
+}
+.popover > .arrow,
+.popover > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.popover > .arrow {
+  border-width: 11px;
+}
+.popover > .arrow:after {
+  border-width: 10px;
+  content: "";
+}
+.popover.top > .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-bottom-width: 0;
+  border-top-color: #999999;
+  border-top-color: rgba(0, 0, 0, 0.25);
+  bottom: -11px;
+}
+.popover.top > .arrow:after {
+  content: " ";
+  bottom: 1px;
+  margin-left: -10px;
+  border-bottom-width: 0;
+  border-top-color: #ffffff;
+}
+.popover.right > .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-left-width: 0;
+  border-right-color: #999999;
+  border-right-color: rgba(0, 0, 0, 0.25);
+}
+.popover.right > .arrow:after {
+  content: " ";
+  left: 1px;
+  bottom: -10px;
+  border-left-width: 0;
+  border-right-color: #ffffff;
+}
+.popover.bottom > .arrow {
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999999;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  top: -11px;
+}
+.popover.bottom > .arrow:after {
+  content: " ";
+  top: 1px;
+  margin-left: -10px;
+  border-top-width: 0;
+  border-bottom-color: #ffffff;
+}
+.popover.left > .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999999;
+  border-left-color: rgba(0, 0, 0, 0.25);
+}
+.popover.left > .arrow:after {
+  content: " ";
+  right: 1px;
+  border-right-width: 0;
+  border-left-color: #ffffff;
+  bottom: -10px;
+}
+
+#weather_time_select {
+    width: 100%;
+    margin-left: 22px;
+}
+
+#close {
+    position: relative;
+    float: right;
+}
+
+.windscale {
+    position: absolute;
+    bottom: 60px;
+    padding: 4px;
+}
+
+.windscale_color {
+    width: 20px;
+    min-height: 15px;
+    color: white;
+    font-size: 10px;
+    text-align:center;
+}
+
+.zoom_level {
+    font-size: 10px;
+    text-align:center;
+}
+
+#tripplanner {
+    padding-left: 5px;
+    overflow-y: auto;
+    width: 245px;
+    height: 100%;
+}
+
+#tripplannertable {
+    padding-bottom: 5px;
+}
+
+#tripplanner .label {
+    font-weight: bold;
+}
+
+#tripplanner .position {
+    padding: 5px;
+}
+
+#tripplanner .routesegment {
+    border-left: 2px solid #003C88;
+    margin-left: 5px;
+    padding: 5px;
+}
+
+#tripplannerdownload {
+    margin-left: 8px;
+}

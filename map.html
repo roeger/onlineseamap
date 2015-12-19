@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <link rel="stylesheet" href="lib/ol3/ol.css" type="text/css">
+    <link rel="stylesheet" href="css/map.css" type="text/css">
+    <title>Sea map with OpenLayers 3</title>
+    <script src='http://code.jquery.com/jquery-1.11.3.js'></script>
+    <script src="lib/filesaver/FileSaver.min.js" type="text/javascript"></script>
+    <script src="lib/ol3/ol-debug.js" type="text/javascript"></script>
+    <script src='js/main.js'></script>
+    <script src='js/utils.js'></script>
+    <script src='js/layer_openstreetmap.js'></script>
+    <script src='js/layer_bing_aerial.js'></script>
+    <script src='js/layer_stamen.js'></script>
+    <script src='js/layer_seamarks.js'></script>
+    <script src='js/layer_weather.js'></script>
+    <script src='js/control_layer_selector.js'></script>
+    <script src='js/control_mouse_position.js'></script>
+    <script src='js/control_search.js'></script>
+    <script src='js/control_zoom_level.js'></script>
+    <script src='js/tool_permalink.js'></script>
+    <script src='js/tool_trip_planner.js'></script>
+  </head>
+  <body onload='onc.init()'>
+    <div id="map">
+        <div id="sidepanel">
+            <div id="sidebar"></div>
+            <div id="menubuttons">
+                <div id="showlayerselector"></div>
+                <div id="showsearch"></div>
+                <div id="showtripplanner"></div>
+                <div id="showpermalink"></div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
