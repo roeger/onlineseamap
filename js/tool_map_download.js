@@ -124,7 +124,7 @@ onc.MapDownload.registerControl = function() {
             document.getElementById('mapnamefield').innerHTML = f.get('name');
             var downloadbutton = document.getElementById('mapdownloadbutton');
             downloadbutton.disabled = false;
-            downloadbutton.setAttribute("disabled", ""); 
+            downloadbutton.removeAttribute("disabled"); 
         }
     });
    
