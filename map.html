@@ -8,6 +8,8 @@
     <script src='http://code.jquery.com/jquery-1.11.3.js'></script>
     <script src="lib/filesaver/FileSaver.min.js" type="text/javascript"></script>
     <script src="lib/ol3/ol-debug.js" type="text/javascript"></script>
+    <script src='http://code.jquery.com/jquery-1.11.1.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script src='js/main.js'></script>
     <script src='js/utils.js'></script>
     <script src='js/layer_openstreetmap.js'></script>
@@ -15,15 +17,18 @@
     <script src='js/layer_stamen.js'></script>
     <script src='js/layer_seamarks.js'></script>
     <script src='js/layer_weather.js'></script>
+    <script src='js/layer_water_levels.js'></script>
     <script src='js/control_layer_selector.js'></script>
     <script src='js/control_mouse_position.js'></script>
     <script src='js/control_search.js'></script>
     <script src='js/control_zoom_level.js'></script>
     <script src='js/tool_permalink.js'></script>
     <script src='js/tool_trip_planner.js'></script>
+    <script src='js/tool_map_download.js'></script>
   </head>
   <body onload='onc.init()'>
     <div id="map">
+        <div id="popup"></div>
         <div id="sidepanel">
             <div id="sidebar"></div>
             <div id="menubuttons">
@@ -31,6 +36,7 @@
                 <div id="showsearch"></div>
                 <div id="showtripplanner"></div>
                 <div id="showpermalink"></div>
+                <div id="showmapdownload"></div>
             </div>
         </div>
     </div>

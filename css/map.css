@@ -89,7 +89,7 @@ body{
     float: right;
   }
 
-  .layerselectoricon, .searchicon, .tripplannericon, .permalinkicon, .editicon {
+  .layerselectoricon, .searchicon, .tripplannericon, .permalinkicon, .mapdownloadicon, .editicon {
     position: relative;
     top: 50px;
     float: right;
@@ -116,6 +116,10 @@ body{
 
  .permalinkicon {
     background-image: url(../icons/open-iconic/link-intact-w.png);
+ }
+
+ .mapdownloadicon {
+    background-image: url(../icons/open-iconic/arrow-circle-bottom-w.png);
  }
 
  .editicon {
@@ -151,6 +155,10 @@ body{
     width: 250px;
  }
  .tripplanner {
+    height: 100%;
+    width: 250px;
+ }
+ .mapdownload {
     height: 100%;
     width: 250px;
  }
@@ -348,6 +356,7 @@ body{
     height: 100%;
 }
 
+
 #tripplannertable {
     padding-bottom: 5px;
 }
@@ -368,4 +377,28 @@ body{
 
 #tripplannerdownload {
     margin-left: 8px;
+}
+
+#mapdownload {
+    padding-left: 5px;
+    overflow-y: auto;
+    width: 245px;
+    height: 100%;
+}
+
+div#mapnamefield {
+    font-weight: bold;
+    padding: 5px;
+}
+
+input#mapdownloadbutton {
+    padding: 10px; 
+}
+
+input#mapdownloadbutton[disabled="disabled"] {
+    display: none;
+}
+
+input#mapdownloadbutton:disabled {
+    display: none;
 }

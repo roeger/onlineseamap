@@ -6,7 +6,7 @@ var onc = onc || {
 
 onc.init = function() {
     onc.layerManagers = [onc.OpenStreetMap, onc.BingAerial, onc.Stamen,
-                         onc.SeaMarks, onc.Weather]
+                         onc.SeaMarks, onc.Weather, onc.WaterLevels]
     var queryValues = onc.getQueryValues();
     var zoom = parseInt(queryValues['z']) || 9;
     var centerStrings = (queryValues['c'] || "").split(',');
@@ -40,6 +40,7 @@ onc.init = function() {
         onc.layerManagers[i].registerLayers(queryValues);
     }
     
+    onc.WaterLevels.registerInteraction();
 
     onc.MousePosition.registerControl();
     onc.LayerSelector.registerControl();
@@ -47,5 +48,6 @@ onc.init = function() {
     onc.ZoomLevel.registerControl();
     onc.TripPlanner.registerControl();
     onc.PermaLink.registerControl();
+    onc.MapDownload.registerControl();
 //    Edit.registerControl();
 };
